@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Inputs from './components/inputs'
+import Display from './components/display'
 import './App.css';
 
 function App() {
+  const [color, setColor] = useState("");
+  const [results, setResults] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Inputs color={color} setColor={setColor} results={results} setResults={setResults}/>
+      <Display results={results}/>
     </div>
   );
 }
