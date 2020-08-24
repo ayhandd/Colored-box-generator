@@ -8,14 +8,14 @@ const Inputs = (props) => {
     const addBox = (e) => {
         const temp = {color: color}
         setResults([...results, temp])
-        setColor({color: ""});
+        setColor("");
         
     }
     return(
         <div>
             <h1>Generate boxes with your choise of color</h1>
             <label>Color: </label>
-            <input onChange={colorBox} type="text" name="color"/>
+            <input onChange={colorBox} type="text" name="color" value={color}/>
             <button onClick={addBox}>Add</button>
         </div>
     )
